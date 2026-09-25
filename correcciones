@@ -1,0 +1,79 @@
+PS C:\Users\Tarde\Downloads> python "grafico (1).py"
+T1: CARGA E INSPECCIÓN
+Primeras filas del dataset (.head()):
+   survived  pclass     sex   age  sibsp  parch     fare embarked  class    who  adult_male deck  embark_town alive  alone
+0         0       3    male  22.0      1      0   7.2500        S  Third    man        True  NaN  Southampton    no  False
+1         1       1  female  38.0      1      0  71.2833        C  First  woman       False    C    Cherbourg   yes  False
+2         1       3  female  26.0      0      0   7.9250        S  Third  woman       False  NaN  Southampton   yes   True
+3         1       1  female  35.0      1      0  53.1000        S  First  woman       False    C  Southampton   yes  False
+4         0       3    male  35.0      0      0   8.0500        S  Third    man        True  NaN  Southampton    no   True
+Información general y tipos de datos (.info()):
+<class 'pandas.DataFrame'>
+RangeIndex: 891 entries, 0 to 890
+Data columns (total 15 columns):
+ #   Column       Non-Null Count  Dtype   
+---  ------       --------------  -----   
+ 0   survived     891 non-null    int64   
+ 1   pclass       891 non-null    int64   
+ 2   sex          891 non-null    str     
+ 3   age          714 non-null    float64 
+ 4   sibsp        891 non-null    int64   
+ 5   parch        891 non-null    int64   
+ 6   fare         891 non-null    float64 
+ 7   embarked     889 non-null    str     
+ 8   class        891 non-null    category
+ 9   who          891 non-null    str     
+ 10  adult_male   891 non-null    bool    
+ 11  deck         203 non-null    category
+ 12  embark_town  889 non-null    str     
+ 13  alive        891 non-null    str     
+ 14  alone        891 non-null    bool    
+dtypes: bool(2), category(2), float64(2), int64(4), str(5)
+memory usage: 80.7 KB
+Estadísticas descriptivas de columnas numéricas (.describe()):
+         survived      pclass         age       sibsp       parch        fare
+count  891.000000  891.000000  714.000000  891.000000  891.000000  891.000000
+mean     0.383838    2.308642   29.699118    0.523008    0.381594   32.204208
+std      0.486592    0.836071   14.526497    1.102743    0.806057   49.693429
+min      0.000000    1.000000    0.420000    0.000000    0.000000    0.000000
+25%      0.000000    2.000000   20.125000    0.000000    0.000000    7.910400
+50%      0.000000    3.000000   28.000000    0.000000    0.000000   14.454200
+75%      1.000000    3.000000   38.000000    1.000000    0.000000   31.000000
+max      1.000000    3.000000   80.000000    8.000000    6.000000  512.329200
+Forma del dataset (Filas, Columnas): (891, 15)
+
+==================================================
+T2: LIMPIEZA DE DATOS (NULOS Y DUPLICADOS)
+==================================================
+Filas duplicadas encontradas: 107
+Filas tras eliminar duplicados: 784
+
+Valores nulos por columna antes de limpiar:
+age            106
+embarked         2
+deck           582
+embark_town      2
+dtype: int64
+
+-> Columna 'deck' eliminada por exceso de valores nulos (>70%).
+-> Nulos en 'age' rellenados con la mediana: 28.2 años.
+-> Nulos en puerto de embarque rellenados con la moda: 'Southampton' ('S').
+
+Comprobación de nulos tras la limpieza:
+survived       0
+pclass         0
+sex            0
+age            0
+sibsp          0
+parch          0
+fare           0
+embarked       0
+class          0
+who            0
+adult_male     0
+embark_town    0
+alive          0
+alone          0
+dtype: int64
+Dimensiones finales del dataset limpio: (784, 14)
+PS C:\Users\Tarde\Downloads> 
