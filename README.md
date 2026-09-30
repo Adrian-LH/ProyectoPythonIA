@@ -4,10 +4,10 @@ Actividad P1 de la optativa **Python para IA** (2º DAM). Análisis exploratorio
 
 ## Roles
 
-**T1:** Adrián Caro y Adrián Mier.
-**T2:** Marcos, Alex y Adrián Vasconez.
-**T3, T4:** Miguel Ángel, Carlos y Adrián Luque.
-**T5:** Adrián Luque.
+- **T1:** Adrián Caro y Adrián Mier.
+- **T2:** Marcos, Alex y Adrián Vasconez.
+- **T3, T4:** Miguel Ángel, Carlos y Adrián Luque.
+- **T5:** Adrián Luque.
 
 ## Dataset
 
