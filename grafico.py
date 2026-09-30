@@ -30,7 +30,7 @@ print("=" * 50)
 duplicados = df.duplicated().sum()
 print(f"Filas duplicadas encontradas: {duplicados}")
 
-#Eliminamos las filas repetidas para no sesgar las estadísticas
+#Eliminamos las filas repetidas
 df = df.drop_duplicates().reset_index(drop=True)
 print(f"Filas tras eliminar duplicados: {df.shape[0]}")
 
