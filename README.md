@@ -2,6 +2,13 @@
 
 Actividad P1 de la optativa **Python para IA** (2º DAM). Análisis exploratorio con `numpy` y `pandas`.
 
+## Roles
+
+**T1:** Adrián Caro y Adrián Mier
+**T2:** Marcos, Alex y Adrián Vasconez
+**T3, T4:** Miguel Ángel, Carlos y Adrián Luque
+**T5:** Adrián Luque
+
 ## Dataset
 
 Se usa el dataset recomendado por la actividad: los **pasajeros del Titanic**, cargado directamente desde `seaborn`:
@@ -43,21 +50,3 @@ Tiene 891 filas y 15 columnas (edad, sexo, clase del billete, tarifa, puerto de 
 python -m pip install numpy pandas seaborn matplotlib
 jupyter notebook titanic_analisis.ipynb
 ```
-
-
-
-
-
-Nuestro labor ha consistido en sanear los datos para que las conclusiones posteriores no estén falseadas por registros repetidos o valores vacíos:
-
-Eliminación de duplicados (df.drop_duplicates()): He localizado y eliminado más de 100 filas que estaban repetidas de manera idéntica, evitando que ciertos pasajeros contasen doble en los promedios.
-
-Diagnóstico de valores ausentes (df.isna().sum()): He escaneado las 891 filas para cuantificar con exactitud cuántos valores nulos (NaN) tenía cada columna.
-
-Eliminación de la columna deck: He detectado que a la variable de cubierta le faltaba más del 70% de la información, así que la he eliminado por completo con .drop() porque inventarse tantos datos sesgaría el estudio.
-
-Imputación de la edad (age): He rellenado los huecos vacíos de edad con la mediana mediante .fillna(). He elegido la mediana frente a la media para evitar distorsiones por edades extremas sin perder pasajeros por el camino.
-
-Imputación de puertos (embarked / embark_town): Al faltar solo 2 registros en variables de texto, los he rellenado con la moda (el puerto más repetido, Southampton).
-
-Control de calidad (df.isna().sum() y df.duplicated().sum()): He ejecutado una comprobación final demostrando que el dataset ha quedado con cero nulos y totalmente listo para que el siguiente grupo pueda continuar con el análisis.
