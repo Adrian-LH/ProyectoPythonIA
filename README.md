@@ -18,7 +18,7 @@ Tiene 891 filas y 15 columnas (edad, sexo, clase del billete, tarifa, puerto de 
 - `titanic_analisis.ipynb`: notebook con el código comentado y organizado por tareas:
   - **T1** Carga e inspección (`head`, `info`, `describe`, `shape`) Encargados ***Adrian Caro y Adrian Mier Gallent***
   - **T2** Limpieza: duplicados y valores nulos, con su justificación
-  - **T3** Transformación: columna derivada `age_group` con `np.select`
+  - **T3** Transformación: columna derivada `age_group` con `np.select` Encargados ***Miguel Ángel Fernández y Carlos Álvarez Polo***
   - **T4** Análisis: filtros, `groupby` y más de 5 estadísticas
   - **T5** Conclusiones y respuestas a las preguntas guía
 
