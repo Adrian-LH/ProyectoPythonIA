@@ -40,7 +40,7 @@ Tiene 891 filas y 15 columnas (edad, sexo, clase del billete, tarifa, puerto de 
 ## Cómo ejecutarlo
 
 ```bash
-pip install numpy pandas seaborn matplotlib jupyter
+python -m pip install numpy pandas seaborn matplotlib
 jupyter notebook titanic_analisis.ipynb
 ```
 
